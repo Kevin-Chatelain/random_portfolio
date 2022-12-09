@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.8s;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.landing {
+    height: 100vh;
+    background-color: rgb(17, 17, 17) ;
+    color: rgb(255, 230, 192);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .title-container {
+        overflow: hidden;
+        padding: 5px;
+
+        div {
+            overflow: hidden;
+            p {
+                font-family: 'Playfair Display', serif;
+                font-weight: 600;
+                font-size: 4em;
+                text-align: center;
+                line-height: 65px;
+                overflow: hidden;
+                transform: translateY(100%);
+                animation: text-to-top 1s ease forwards;
+            }
+        }
+
+        div:nth-child(1) {
+            p{
+               animation-delay: 0.5s;
+            }
+        }
+
+        div:nth-child(2) {
+            p{
+               animation-delay: 1s;
+            }
+        }
+
+       
+    }
+}
+
+.main {
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;    
+    transform: translateY(100%);
+    background-color: rgb(255, 230, 192);
+}
+
+.up {
+    transform: translateY(0%);
+}
+
+@keyframes text-to-top {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
