@@ -32,7 +32,7 @@ body {
                 line-height: 65px;
                 overflow: hidden;
                 transform: translateY(100%);
-                animation: text-to-top 1s ease forwards;
+                animation: to-top 1s ease forwards;
             }
         }
 
@@ -48,6 +48,32 @@ body {
             }
         }
 
+        .bouton {
+            height: 50px;
+            width: 50px;
+            border: 2px solid rgb(255, 230, 192);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            filter: opacity(0);
+            animation: opacity 1.5s forwards ease, pulse infinite 1s ease alternate-reverse;
+            transform-origin: center;
+            animation-delay: 2s;
+            cursor: pointer;
+
+            .circle {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: rgb(255, 230, 192);
+
+            }
+
+    
+        }
+
        
     }
 }
@@ -59,13 +85,14 @@ body {
     top: 0;    
     transform: translateY(100%);
     background-color: rgb(255, 230, 192);
+    
 }
 
 .up {
     transform: translateY(0%);
 }
 
-@keyframes text-to-top {
+@keyframes to-top {
     0% {
         transform: translateY(100%);
     }
@@ -74,5 +101,30 @@ body {
         transform: translateY(0%);
     }
 }
+
+@keyframes opacity {
+    0% {
+       filter: opacity(0);
+    }
+
+    100% {
+        filter: opacity(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+       transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+
+
+
 
 
